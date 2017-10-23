@@ -1,17 +1,17 @@
 TODO:
-- Update this file
 - Update docs/manual.md
 - Update index.rst
 - Update docs/installation.md
 - Make sure all links are correct
 
-#  < TOOL NAME >
+#  XcnvToBed
 This tool is part of BIOPET tool suite that is developed at LUMC by [the SASC team](http://sasc.lumc.nl/). 
 Each tool in the BIOPET tool suite is meant to offer a standalone function that can be used to perform a
 dedicate data analysis task or added as part of [BIOPET pipelines](http://biopet-docs.readthedocs.io/en/latest/).
 
 #  About this tool
-<Description of a tool>
+This tool converts a sample track within an XHMM XCNV file to a BED track. In the output the fourth column indicates
+the type of CNV for the region: deletion (-1), normal (0) or duplication (1).
 
 #  Documentation
 For documentation and manuals visit the [readthedocs page](http://biopet-toolName.readthedocs.io/en/latest/).
