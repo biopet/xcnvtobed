@@ -167,7 +167,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'XcnvToBed', u'XcnvToBed Documentation',
-     author, 'XcnvToBed', 'One line description of project.',
+     author, 'XcnvToBed', 'Convert a sample track within an XHMM XCNV file to a BED track.',
      'Miscellaneous'),
 ]
 
