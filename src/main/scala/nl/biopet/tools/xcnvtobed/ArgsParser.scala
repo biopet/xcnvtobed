@@ -4,7 +4,8 @@ import java.io.File
 
 import nl.biopet.utils.tool.AbstractOptParser
 
-class ArgsParser(cmdName: String) extends AbstractOptParser[Args](cmdName) {
+class ArgsParser(toolCommand: ToolCommand[Args])
+    extends AbstractOptParser[Args](toolCommand) {
   head(
     "Convert a sample track within an XHMM XCNV file to a BED track. Fourt column indicates deletion (-1), normal (0) or duplication (1) of region")
 
