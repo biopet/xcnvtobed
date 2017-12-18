@@ -29,7 +29,9 @@ import scala.io.Source
 
 object XcnvToBed extends ToolCommand[Args] {
   def emptyArgs: Args = Args()
+
   def argsParser = new ArgsParser(this)
+
   def main(args: Array[String]): Unit = {
     val cmdArgs = cmdArrayToArgs(args)
 
@@ -62,10 +64,14 @@ object XcnvToBed extends ToolCommand[Args] {
       |In the output the fourth column indicates the type of CNV for the region:
       |deletion (-1), normal (0) or duplication (1).""".stripMargin
 
-  def exampleText =
-    example(
-      "-I input.xcnv " +
-        "-O output.bed" +
-        "-S sample")
+  def exampleText = {
 
+  //Example must be unsafe because input file does not exist.
+  unsafeExample("-I", "input.xcnv",
+    "-O", "output.bed",
+    "-S", "sample") +
+  """
+    |Specify in sample which sample should be extracted to the BED file.
+  """.stripMargin
+}
 }
