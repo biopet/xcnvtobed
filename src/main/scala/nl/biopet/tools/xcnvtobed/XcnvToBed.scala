@@ -66,12 +66,10 @@ object XcnvToBed extends ToolCommand[Args] {
 
   def exampleText = {
 
-  //Example must be unsafe because input file does not exist.
-  unsafeExample("-I", "input.xcnv",
-    "-O", "output.bed",
-    "-S", "sample") +
-  """
+    //Example must be unsafe because input file does not exist.
+    unsafeExample("-I", "input.xcnv", "-O", "output.bed", "-S", "sample") +
+      """
     |Specify in sample which sample should be extracted to the BED file.
   """.stripMargin
-}
+  }
 }
