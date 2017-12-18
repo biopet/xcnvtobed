@@ -28,4 +28,21 @@ object XcnvToBed extends ToolCommand[Args] {
 
     logger.info("Done")
   }
+
+  def descriptionText: String =
+    """
+      |This tool converts a sample track within an XHMM XCNV file to a BED track.
+      |In the output the fourth column indicates
+      |the type of CNV for the region: deletion (-1), normal (0) or duplication (1).
+    """.stripMargin
+
+  def manualText: String =
+    """This tool converts a sample track within an XHMM XCNV file to a BED track.
+      |In the output the fourth column indicates the type of CNV for the region:
+      |deletion (-1), normal (0) or duplication (1).""".stripMargin
+
+  def exampleText = example("-I input.xcnv " +
+  "-O output.bed" +
+  "-S sample")
+
 }
